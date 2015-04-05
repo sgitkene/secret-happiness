@@ -61,7 +61,7 @@ public class SceneParser {
 			}
 			else if (line.startsWith("Triangle")){
 				l.skip("Triangle");
-				shapes.add(new triangle(new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()), new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()),
+				shapes.add(new Triangle(new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()), new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()),
 						new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()), new Material(new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble()),
 						l.nextDouble(), l.nextDouble(), l.nextDouble(), l.nextDouble()), new Vector(l.nextDouble(), l.nextDouble(), l.nextDouble())));
 			}

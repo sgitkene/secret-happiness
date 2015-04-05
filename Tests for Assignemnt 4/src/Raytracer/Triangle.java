@@ -1,12 +1,12 @@
 package Raytracer;
 
-public class triangle extends Shape {
+public class Triangle extends Shape {
 	
 	private Vector a,b,c, ab, ac, norm, emission;
 	private Material mat;
 	private Plane plane;
 	
-	public triangle(Vector a, Vector b, Vector c, Material mat, Vector emission) {
+	public Triangle(Vector a, Vector b, Vector c, Material mat, Vector emission) {
 		// TODO Auto-generated constructor stub
 		this.a = a;
 		this.b = b;

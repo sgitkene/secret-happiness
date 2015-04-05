@@ -4,15 +4,15 @@ public class Square extends Shape {
 	
 	private Vector origin, a, b, emission;
 	private Material mat;
-	private triangle tri1,tri2;
+	private Triangle tri1,tri2;
 	public Square(Vector origin, Vector a, Vector b, Material mat, Vector emission) {
 		this.origin = origin;
 		this.a = a;
 		this.b = b.normalize();
 		this.mat = mat;
 		this.emission = emission;
-		tri1 = new triangle(origin, origin.plus(a), origin.plus(this.b.smult(a.norm())), mat, emission);
-		tri2 = new triangle(origin.plus(a.plus(this.b.smult(a.norm()))), origin.plus(a), origin.plus(this.b.smult(a.norm())), mat, emission);
+		tri1 = new Triangle(origin, origin.plus(a), origin.plus(this.b.smult(a.norm())), mat, emission);
+		tri2 = new Triangle(origin.plus(a.plus(this.b.smult(a.norm()))), origin.plus(a), origin.plus(this.b.smult(a.norm())), mat, emission);
 	}
 
 	@Override
