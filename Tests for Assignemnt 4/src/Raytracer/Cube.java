@@ -1,10 +1,9 @@
-/**
- * 
- */
 package Raytracer;
 
-/**
+/**This is the buildplan for a cube.
+ * It consists of 6 squares.
  * @author Max
+ * This is is currently a 
  *
  */
 public class Cube extends Shape {
@@ -31,10 +30,13 @@ public class Cube extends Shape {
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see assignment3.Shape#intersect(assignment3.Ray)
-	 */
 	@Override
+	/*
+	 * (non-Javadoc)
+	 * @see Raytracer.Shape#intersect(Raytracer.Ray)
+	 * Since a Ray that hits a Cube always hits two squares of the cube
+	 * we also have to determine which collision occurs earlier.
+	 */
 	double intersect(Ray r) {
 		double[] ds = new double[6];
 		for (int i = 0; i<squares.length; i++){
@@ -53,9 +55,12 @@ public class Cube extends Shape {
 		}
 		return min;
 	}
-
-	/* (non-Javadoc)
-	 * @see assignment3.Shape#getNormVec(assignment3.Vector)
+	/*
+	 * (non-Javadoc)
+	 * @see Raytracer.Shape#getNormVec(Raytracer.Vector)
+	 * The client has to supply the point on which he wants the normal vector.
+	 * The cube then shoots a ray through that point and checks with which
+	 * square it intersects. It then returns that square's normal vector.
 	 */
 	@Override
 	Vector getNormVec(Vector incoming) {
@@ -66,17 +71,17 @@ public class Cube extends Shape {
 		}
 		return null;
 	}
-
-	/* (non-Javadoc)
-	 * @see assignment3.Shape#getMat()
+	/*
+	 * (non-Javadoc)
+	 * @see Raytracer.Shape#getMat()
 	 */
 	@Override
 	public Material getMat() {
 		return mat;
 	}
-
-	/* (non-Javadoc)
-	 * @see assignment3.Shape#getEmission()
+	/*
+	 * (non-Javadoc)
+	 * @see Raytracer.Shape#getEmission()
 	 */
 	@Override
 	public Vector getEmission() {

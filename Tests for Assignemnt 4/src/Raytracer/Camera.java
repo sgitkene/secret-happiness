@@ -1,13 +1,18 @@
 package Raytracer;
 
+/* This creates a virtual Camera, and is used to determine
+ * where cast rays should go through.
+ * 
+ */
+
 public class Camera {
 
-	private final Ray eye;
-	private final Vector up;
+	private final Ray eye;		// Camera origin and direction.
+	private final Vector up;	// What is to be considered upwards.
 	
-	private final Vector u;
-	private final Vector v;
-	private final Vector w;
+	private final Vector u;		//orthonormal basis
+	private final Vector v;		//...
+	private final Vector w;		//...
 	
 	
 	public Camera(Ray eye, Vector up) {
