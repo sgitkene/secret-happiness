@@ -1,3 +1,8 @@
+/* Tester for SceneParser.
+ * A text file should be supplied in the format [Shape] double doubl double ... double (amount of doubles needed for a working shape)
+ * 
+ */
+
 package ParserTester;
 import java.io.File;
 import java.io.IOException;
