@@ -8,8 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-import assignment4.SceneParser;
-import assignment4.Shape;
+import Raytracer.SceneParser;
+import Raytracer.Shape;
 
 public class Main {
 
